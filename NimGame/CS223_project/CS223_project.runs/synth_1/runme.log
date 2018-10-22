@@ -1,0 +1,983 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+WARNING: Default location for XILINX_VIVADO_HLS not found: 
+
+****** Vivado v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-1223] The version limit for your license is '2016.12' and will expire in -497 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 247.922 ; gain = 69.465
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:22]
+INFO: [Synth 8-638] synthesizing module 'button_debounce' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:329]
+	Parameter CLK_FREQUENCY bound to: 66000000 - type: integer 
+	Parameter DEBOUNCE_HZ bound to: 2 - type: integer 
+	Parameter COUNT_VALUE bound to: 33000000 - type: integer 
+	Parameter WAIT bound to: 0 - type: integer 
+	Parameter FIRE bound to: 1 - type: integer 
+	Parameter COUNT bound to: 2 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:368]
+INFO: [Synth 8-256] done synthesizing module 'button_debounce' (1#1) [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:329]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:85]
+INFO: [Synth 8-638] synthesizing module 'score_table' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:435]
+INFO: [Synth 8-256] done synthesizing module 'score_table' (2#1) [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:435]
+WARNING: [Synth 8-689] width (1) of port connection 'score' does not match port width (8) of module 'score_table' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:85]
+WARNING: [Synth 8-350] instance 'st_l' of module 'score_table' requires 5 connections, but only 4 given [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:85]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:86]
+WARNING: [Synth 8-689] width (1) of port connection 'score' does not match port width (8) of module 'score_table' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:86]
+WARNING: [Synth 8-350] instance 'st_r' of module 'score_table' requires 5 connections, but only 4 given [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:86]
+INFO: [Synth 8-638] synthesizing module 'game_fsm' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:97]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:128]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:311]
+WARNING: [Synth 8-87] always_comb on 'newNoOfSticksR1_reg' did not result in combinational logic [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:132]
+WARNING: [Synth 8-87] always_comb on 'nextState_reg[3]' did not result in combinational logic [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:133]
+WARNING: [Synth 8-87] always_comb on 'nextState_reg[2]' did not result in combinational logic [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:133]
+WARNING: [Synth 8-87] always_comb on 'nextState_reg[1]' did not result in combinational logic [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:133]
+WARNING: [Synth 8-87] always_comb on 'nextState_reg[0]' did not result in combinational logic [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:133]
+WARNING: [Synth 8-87] always_comb on 'newNoOfSticksR2_reg' did not result in combinational logic [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:137]
+WARNING: [Synth 8-87] always_comb on 'newNoOfSticksR3_reg' did not result in combinational logic [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:142]
+WARNING: [Synth 8-87] always_comb on 'newNoOfSticksR4_reg' did not result in combinational logic [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:147]
+WARNING: [Synth 8-87] always_comb on 'gameFinished_reg' did not result in combinational logic [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:298]
+WARNING: [Synth 8-87] always_comb on 'noOfSticksR1_reg' did not result in combinational logic [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+WARNING: [Synth 8-87] always_comb on 'noOfSticksR2_reg' did not result in combinational logic [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+WARNING: [Synth 8-87] always_comb on 'noOfSticksR3_reg' did not result in combinational logic [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+WARNING: [Synth 8-87] always_comb on 'noOfSticksR4_reg' did not result in combinational logic [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+WARNING: [Synth 8-87] always_comb on 'direction_reg' did not result in combinational logic [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:312]
+INFO: [Synth 8-256] done synthesizing module 'game_fsm' (3#1) [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:97]
+INFO: [Synth 8-638] synthesizing module 'get_vectors' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:393]
+INFO: [Synth 8-256] done synthesizing module 'get_vectors' (4#1) [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:393]
+INFO: [Synth 8-638] synthesizing module 'stepmotor' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/stepmotor.sv:32]
+INFO: [Synth 8-638] synthesizing module 'LUT2' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15753]
+	Parameter INIT bound to: 4'b1110 
+INFO: [Synth 8-256] done synthesizing module 'LUT2' (5#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15753]
+INFO: [Synth 8-638] synthesizing module 'LUT2__parameterized0' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15753]
+	Parameter INIT bound to: 4'b0110 
+INFO: [Synth 8-256] done synthesizing module 'LUT2__parameterized0' (5#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15753]
+INFO: [Synth 8-638] synthesizing module 'LUT2__parameterized1' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15753]
+	Parameter INIT bound to: 4'b0010 
+INFO: [Synth 8-256] done synthesizing module 'LUT2__parameterized1' (5#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15753]
+INFO: [Synth 8-638] synthesizing module 'FDRE' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:3016]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+INFO: [Synth 8-256] done synthesizing module 'FDRE' (6#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:3016]
+INFO: [Synth 8-638] synthesizing module 'LUT3' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b01110100 
+INFO: [Synth 8-256] done synthesizing module 'LUT3' (7#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT5' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15873]
+	Parameter INIT bound to: 32'b10010110111111111001011000000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT5' (8#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15873]
+INFO: [Synth 8-638] synthesizing module 'GND' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:3854]
+INFO: [Synth 8-256] done synthesizing module 'GND' (9#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:3854]
+INFO: [Synth 8-638] synthesizing module 'VCC' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:35496]
+INFO: [Synth 8-256] done synthesizing module 'VCC' (10#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:35496]
+INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized0' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15873]
+	Parameter INIT bound to: 32'b00000000000000001000000000000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized0' (10#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15873]
+INFO: [Synth 8-638] synthesizing module 'LUT6' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15919]
+	Parameter INIT bound to: 64'b0000000000000000000000000000000000000000000000000000000000000001 
+INFO: [Synth 8-256] done synthesizing module 'LUT6' (11#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15919]
+INFO: [Synth 8-638] synthesizing module 'LUT4' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+	Parameter INIT bound to: 16'b1000000000000001 
+INFO: [Synth 8-256] done synthesizing module 'LUT4' (12#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+INFO: [Synth 8-638] synthesizing module 'LUT1' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15719]
+	Parameter INIT bound to: 2'b01 
+INFO: [Synth 8-256] done synthesizing module 'LUT1' (13#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15719]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized0' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+	Parameter INIT bound to: 16'b1001000000001001 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized0' (13#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+INFO: [Synth 8-638] synthesizing module 'CARRY4' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:951]
+INFO: [Synth 8-256] done synthesizing module 'CARRY4' (14#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:951]
+WARNING: [Synth 8-689] width (3) of port connection 'CO' does not match port width (4) of module 'CARRY4' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/stepmotor.sv:317]
+WARNING: [Synth 8-350] instance 'count_reg[0]_i_1' of module 'CARRY4' requires 6 connections, but only 5 given [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/stepmotor.sv:315]
+WARNING: [Synth 8-350] instance 'count_reg[0]_i_4' of module 'CARRY4' requires 6 connections, but only 5 given [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/stepmotor.sv:328]
+WARNING: [Synth 8-689] width (3) of port connection 'CO' does not match port width (4) of module 'CARRY4' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/stepmotor.sv:399]
+INFO: [Synth 8-638] synthesizing module 'LUT2__parameterized2' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15753]
+	Parameter INIT bound to: 4'b0110 
+INFO: [Synth 8-256] done synthesizing module 'LUT2__parameterized2' (14#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15753]
+INFO: [Synth 8-638] synthesizing module 'LUT2__parameterized3' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15753]
+	Parameter INIT bound to: 4'b1001 
+INFO: [Synth 8-256] done synthesizing module 'LUT2__parameterized3' (14#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15753]
+INFO: [Synth 8-256] done synthesizing module 'stepmotor' (15#1) [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/stepmotor.sv:32]
+INFO: [Synth 8-638] synthesizing module 'SevSeg_4digit' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/SevSeg_4digit.sv:48]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized1' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+	Parameter INIT bound to: 16'b0010000010010100 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized1' (15#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized0' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15919]
+	Parameter INIT bound to: 64'b1111000010101010111111111100110011110000101010100000000011001100 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized0' (15#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15919]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized1' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15919]
+	Parameter INIT bound to: 64'b1111000010101010111111111100110011110000101010100000000011001100 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized1' (15#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15919]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized2' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15919]
+	Parameter INIT bound to: 64'b1111000010101010111111111100110011110000101010100000000011001100 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized2' (15#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15919]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized3' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15919]
+	Parameter INIT bound to: 64'b1111000010101010111111111100110011110000101010100000000011001100 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized3' (15#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15919]
+INFO: [Synth 8-638] synthesizing module 'LUT2__parameterized4' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15753]
+	Parameter INIT bound to: 4'b1011 
+INFO: [Synth 8-256] done synthesizing module 'LUT2__parameterized4' (15#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15753]
+INFO: [Synth 8-638] synthesizing module 'LUT2__parameterized5' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15753]
+	Parameter INIT bound to: 4'b1011 
+INFO: [Synth 8-256] done synthesizing module 'LUT2__parameterized5' (15#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15753]
+INFO: [Synth 8-638] synthesizing module 'LUT2__parameterized6' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15753]
+	Parameter INIT bound to: 4'b0111 
+INFO: [Synth 8-256] done synthesizing module 'LUT2__parameterized6' (15#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15753]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized2' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+	Parameter INIT bound to: 16'b1010110001001000 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized2' (15#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized3' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+	Parameter INIT bound to: 16'b1010001000010000 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized3' (15#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+WARNING: [Synth 8-689] width (1) of port connection 'CO' does not match port width (4) of module 'CARRY4' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/SevSeg_4digit.sv:323]
+WARNING: [Synth 8-689] width (2) of port connection 'O' does not match port width (4) of module 'CARRY4' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/SevSeg_4digit.sv:326]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized4' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+	Parameter INIT bound to: 16'b1100001000010100 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized4' (15#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized5' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+	Parameter INIT bound to: 16'b0101011100010000 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized5' (15#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized6' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+	Parameter INIT bound to: 16'b0101000110010000 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized6' (15#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized7' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+	Parameter INIT bound to: 16'b0100000000100101 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized7' (15#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+INFO: [Synth 8-256] done synthesizing module 'SevSeg_4digit' (16#1) [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/SevSeg_4digit.sv:48]
+INFO: [Synth 8-638] synthesizing module 'display_8x8' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/RGB_display_8X8/display_8X8.sv:34]
+INFO: [Synth 8-638] synthesizing module 'LUT2__parameterized7' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15753]
+	Parameter INIT bound to: 4'b0111 
+INFO: [Synth 8-256] done synthesizing module 'LUT2__parameterized7' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15753]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized0' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b10001111 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized0' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized1' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b00101010 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized1' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT2__parameterized8' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15753]
+	Parameter INIT bound to: 4'b0001 
+INFO: [Synth 8-256] done synthesizing module 'LUT2__parameterized8' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15753]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized2' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b00010100 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized2' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized8' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+	Parameter INIT bound to: 16'b0001010101000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized8' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized1' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15873]
+	Parameter INIT bound to: 32'b00010101010101010100000000000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized1' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15873]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized3' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b10111010 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized3' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized4' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15919]
+	Parameter INIT bound to: 64'b0001010101010101010101010101010101000000000000000000000000000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized4' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15919]
+INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized2' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15873]
+	Parameter INIT bound to: 32'b00000000000000000000000000000001 
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized2' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15873]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized9' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+	Parameter INIT bound to: 16'b1111111111111110 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized9' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+INFO: [Synth 8-638] synthesizing module 'LUT2__parameterized9' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15753]
+	Parameter INIT bound to: 4'b0110 
+INFO: [Synth 8-256] done synthesizing module 'LUT2__parameterized9' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15753]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized4' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b01111000 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized4' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized10' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+	Parameter INIT bound to: 16'b0111111110000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized10' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized3' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15873]
+	Parameter INIT bound to: 32'b01111111111111111000000000000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized3' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15873]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized5' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15919]
+	Parameter INIT bound to: 64'b0111111111111111111111111111111110000000000000000000000000000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized5' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15919]
+INFO: [Synth 8-638] synthesizing module 'LUT2__parameterized10' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15753]
+	Parameter INIT bound to: 4'b0110 
+INFO: [Synth 8-256] done synthesizing module 'LUT2__parameterized10' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15753]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized5' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b01111000 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized5' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized6' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15919]
+	Parameter INIT bound to: 64'b1000000000000000000000000000000000000000000000000000000000000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized6' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15919]
+INFO: [Synth 8-638] synthesizing module 'LUT2__parameterized11' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15753]
+	Parameter INIT bound to: 4'b0110 
+INFO: [Synth 8-256] done synthesizing module 'LUT2__parameterized11' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15753]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized6' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b01111000 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized6' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized11' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+	Parameter INIT bound to: 16'b0111111110000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized11' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized7' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15919]
+	Parameter INIT bound to: 64'b0000000000000000100000000000000000000000000000000000000000000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized7' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15919]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized12' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+	Parameter INIT bound to: 16'b0000000100000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized12' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized13' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+	Parameter INIT bound to: 16'b1111111111111110 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized13' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized4' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15873]
+	Parameter INIT bound to: 32'b00000000000000000000000000000100 
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized4' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15873]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized7' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b10000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized7' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized8' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b00001000 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized8' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized9' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b00001000 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized9' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized10' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b00000100 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized10' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized11' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b00001000 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized11' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized12' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b00000100 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized12' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized13' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b00000100 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized13' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized14' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b00000001 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized14' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized8' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15919]
+	Parameter INIT bound to: 64'b0000000100000000111111111111111100000001000000000000000100000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized8' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15919]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized15' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b10111000 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized15' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized9' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15919]
+	Parameter INIT bound to: 64'b0000000100010001111111111111111111111111111111111111111111111111 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized9' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15919]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized16' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b11111110 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized16' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized17' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b10111000 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized17' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized18' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b10111000 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized18' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized19' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b10111000 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized19' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized20' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b10111000 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized20' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized21' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b10111000 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized21' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized22' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b10111000 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized22' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized23' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b10111000 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized23' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized24' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b10111000 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized24' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized25' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b10111000 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized25' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized26' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b10111000 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized26' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized27' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b10111000 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized27' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized28' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b10111000 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized28' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized29' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b10111000 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized29' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized30' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b10111000 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized30' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT2__parameterized12' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15753]
+	Parameter INIT bound to: 4'b1000 
+INFO: [Synth 8-256] done synthesizing module 'LUT2__parameterized12' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15753]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized31' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b10111000 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized31' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized32' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b10111000 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized32' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized33' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b10111000 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized33' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized34' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b10111000 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized34' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized35' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b10111000 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized35' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized36' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b10111000 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized36' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized37' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b10111000 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized37' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized38' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b10111000 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized38' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT2__parameterized13' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15753]
+	Parameter INIT bound to: 4'b0110 
+INFO: [Synth 8-256] done synthesizing module 'LUT2__parameterized13' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15753]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized39' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b01111000 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized39' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized14' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+	Parameter INIT bound to: 16'b0111111110000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized14' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized5' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15873]
+	Parameter INIT bound to: 32'b01111111111111111000000000000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized5' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15873]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized10' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15919]
+	Parameter INIT bound to: 64'b0111111111111111111111111111111110000000000000000000000000000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized10' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15919]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized11' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15919]
+	Parameter INIT bound to: 64'b1111111101111111111111111111111100000000100000000000000000000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized11' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15919]
+INFO: [Synth 8-638] synthesizing module 'LUT2__parameterized14' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15753]
+	Parameter INIT bound to: 4'b0111 
+INFO: [Synth 8-256] done synthesizing module 'LUT2__parameterized14' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15753]
+INFO: [Synth 8-638] synthesizing module 'LUT3__parameterized40' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+	Parameter INIT bound to: 8'b10110100 
+INFO: [Synth 8-256] done synthesizing module 'LUT3__parameterized40' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15790]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized15' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+	Parameter INIT bound to: 16'b1111011100001000 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized15' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+INFO: [Synth 8-638] synthesizing module 'LUT4__parameterized16' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+	Parameter INIT bound to: 16'b0000000000000010 
+INFO: [Synth 8-256] done synthesizing module 'LUT4__parameterized16' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15830]
+INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized6' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15873]
+	Parameter INIT bound to: 32'b11011111111111110010000000000000 
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized6' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15873]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized12' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15919]
+	Parameter INIT bound to: 64'b1111111111111111111111111111111101010101011111111111111111111111 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized12' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15919]
+INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized7' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15873]
+	Parameter INIT bound to: 32'b01011101111111111111111111111111 
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized7' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15873]
+INFO: [Synth 8-638] synthesizing module 'LUT5__parameterized8' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15873]
+	Parameter INIT bound to: 32'b11111111111111111101010111111111 
+INFO: [Synth 8-256] done synthesizing module 'LUT5__parameterized8' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15873]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized13' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15919]
+	Parameter INIT bound to: 64'b0111111111111111111111111111111111111111111111111111111111111111 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized13' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15919]
+INFO: [Synth 8-638] synthesizing module 'LUT6__parameterized14' [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15919]
+	Parameter INIT bound to: 64'b1111111111111111111111111111111011111111111111101111111111111110 
+INFO: [Synth 8-256] done synthesizing module 'LUT6__parameterized14' (16#1) [C:/Xilinx/Vivado/2015.2/scripts/rt/data/unisim_comp.v:15919]
+INFO: [Synth 8-256] done synthesizing module 'display_8x8' (17#1) [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/RGB_display_8X8/display_8X8.sv:34]
+WARNING: [Synth 8-3848] Net stop in module/entity top does not have driver. [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:47]
+INFO: [Synth 8-256] done synthesizing module 'top' (18#1) [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:22]
+WARNING: [Synth 8-3331] design top has unconnected port rst
+WARNING: [Synth 8-3331] design top has unconnected port dlp
+WARNING: [Synth 8-3331] design top has unconnected port drp
+WARNING: [Synth 8-3331] design top has unconnected port ilp
+WARNING: [Synth 8-3331] design top has unconnected port irp
+WARNING: [Synth 8-3331] design top has unconnected port resetST
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 283.141 ; gain = 104.684
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin d1r1:reset_n to constant 0 [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:75]
+WARNING: [Synth 8-3295] tying undriven pin d2r2:reset_n to constant 0 [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:76]
+WARNING: [Synth 8-3295] tying undriven pin d3r3:reset_n to constant 0 [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:77]
+WARNING: [Synth 8-3295] tying undriven pin d4r4:reset_n to constant 0 [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:78]
+WARNING: [Synth 8-3295] tying undriven pin ilpD:reset_n to constant 0 [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:79]
+WARNING: [Synth 8-3295] tying undriven pin irpD:reset_n to constant 0 [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:80]
+WARNING: [Synth 8-3295] tying undriven pin dlpD:reset_n to constant 0 [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:81]
+WARNING: [Synth 8-3295] tying undriven pin drpD:reset_n to constant 0 [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:82]
+WARNING: [Synth 8-3295] tying undriven pin stepmotor:stop to constant 0 [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:90]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 283.141 ; gain = 104.684
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/RGB_display_8X8/top.xdc]
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Terminal phases[0] cannot be placed on B16 (IOB_X0Y123) because the pad is already occupied by terminal col_select[3] possibly due to user constraint [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/RGB_display_8X8/top.xdc:168]
+Resolution: Verify the location constraints for differential ports are correctly specified in your constraints. The Site type should be of form: IO_LxxP for P-side, and IO_LxxN for N-side (Neg Diff Pair) 
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Terminal phases[1] cannot be placed on A16 (IOB_X0Y126) because the pad is already occupied by terminal col_select[1] possibly due to user constraint [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/RGB_display_8X8/top.xdc:171]
+Resolution: Verify the location constraints for differential ports are correctly specified in your constraints. The Site type should be of form: IO_LxxP for P-side, and IO_LxxN for N-side (Neg Diff Pair) 
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Terminal phases[2] cannot be placed on B15 (IOB_X0Y127) because the pad is already occupied by terminal col_select[2] possibly due to user constraint [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/RGB_display_8X8/top.xdc:174]
+Resolution: Verify the location constraints for differential ports are correctly specified in your constraints. The Site type should be of form: IO_LxxP for P-side, and IO_LxxN for N-side (Neg Diff Pair) 
+CRITICAL WARNING: [Vivado 12-1411] Cannot set LOC property of ports, Terminal phases[3] cannot be placed on A14 (IOB_X0Y138) because the pad is already occupied by terminal col_select[0] possibly due to user constraint [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/RGB_display_8X8/top.xdc:177]
+Resolution: Verify the location constraints for differential ports are correctly specified in your constraints. The Site type should be of form: IO_LxxP for P-side, and IO_LxxN for N-side (Neg Diff Pair) 
+Finished Parsing XDC File [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/RGB_display_8X8/top.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 576.195 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 576.195 ; gain = 397.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 576.195 ; gain = 397.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 576.195 ; gain = 397.738
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4471] merging register 'state_reg[2][3:0]' into 'state_reg[3][3:0]' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:117]
+INFO: [Synth 8-4471] merging register 'state_reg[1][3:0]' into 'state_reg[3][3:0]' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:117]
+INFO: [Synth 8-5546] ROM "gameFinished" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "direction" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-327] inferring latch for variable 'direction_reg' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:312]
+WARNING: [Synth 8-327] inferring latch for variable 'gameFinished_reg' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:298]
+WARNING: [Synth 8-327] inferring latch for variable 'newNoOfSticksR1_reg' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:132]
+WARNING: [Synth 8-327] inferring latch for variable 'newNoOfSticksR2_reg' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:137]
+WARNING: [Synth 8-327] inferring latch for variable 'newNoOfSticksR3_reg' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:142]
+WARNING: [Synth 8-327] inferring latch for variable 'newNoOfSticksR4_reg' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:147]
+WARNING: [Synth 8-327] inferring latch for variable 'nextState_reg[0]' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:133]
+WARNING: [Synth 8-327] inferring latch for variable 'nextState_reg[3]' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:133]
+WARNING: [Synth 8-327] inferring latch for variable 'noOfSticksR1_reg' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+WARNING: [Synth 8-327] inferring latch for variable 'noOfSticksR3_reg' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+WARNING: [Synth 8-327] inferring latch for variable 'noOfSticksR2_reg' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+WARNING: [Synth 8-327] inferring latch for variable 'noOfSticksR4_reg' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 576.195 ; gain = 397.738
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'd1r1' (button_debounce) to 'ilpD'
+INFO: [Synth 8-223] decloning instance 'd1r1' (button_debounce) to 'irpD'
+INFO: [Synth 8-223] decloning instance 'd1r1' (button_debounce) to 'dlpD'
+INFO: [Synth 8-223] decloning instance 'd1r1' (button_debounce) to 'drpD'
+INFO: [Synth 8-223] decloning instance 'st_l' (score_table) to 'st_r'
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     26 Bit       Adders := 4     
+	   2 Input      4 Bit       Adders := 4     
+	   2 Input      3 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 1     
+	   2 Input      1 Bit       Adders := 1     
++---Registers : 
+	               26 Bit    Registers := 4     
+	                8 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                2 Bit    Registers := 4     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   4 Input     26 Bit        Muxes := 4     
+	   3 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 11    
+	   2 Input      4 Bit        Muxes := 8     
+	   3 Input      4 Bit        Muxes := 3     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 10    
+	  12 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 4     
+	   2 Input      2 Bit        Muxes := 3     
+	  12 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 35    
+	   4 Input      1 Bit        Muxes := 4     
+	  12 Input      1 Bit        Muxes := 10    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module button_debounce 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     26 Bit       Adders := 1     
++---Registers : 
+	               26 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input     26 Bit        Muxes := 1     
+	   5 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 1     
+Module score_table 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 4     
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   3 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   3 Input      4 Bit        Muxes := 1     
+Module game_fsm 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 2     
+	   2 Input      2 Bit       Adders := 1     
+	   2 Input      1 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 5     
+	   4 Input      4 Bit        Muxes := 1     
+	   3 Input      4 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 10    
+	  12 Input      3 Bit        Muxes := 2     
+	   4 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	  12 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 31    
+	  12 Input      1 Bit        Muxes := 10    
+Module get_vectors 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 10    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 576.195 ; gain = 397.738
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3331] design top has unconnected port rst
+WARNING: [Synth 8-3331] design top has unconnected port dlp
+WARNING: [Synth 8-3331] design top has unconnected port drp
+WARNING: [Synth 8-3331] design top has unconnected port ilp
+WARNING: [Synth 8-3331] design top has unconnected port irp
+WARNING: [Synth 8-3331] design top has unconnected port resetST
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 576.195 ; gain = 397.738
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 576.195 ; gain = 397.738
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\fsm/nextState_reg[3][1] )
+WARNING: [Synth 8-3332] Sequential element (\fsm/gameFinished_reg ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\fsm/nextState_reg[3][3] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\fsm/nextState_reg[3][2] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\fsm/nextState_reg[3][1] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\fsm/nextState_reg[3][0] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\fsm/noOfSticksR1_reg ) is unused and will be removed from module top.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net noOfSticksR1 with 1st driver pin 'fsm/noOfSticksR1_reg/Q' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net noOfSticksR1 with 2nd driver pin 'VCC' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net noOfSticksR1 is connected to constant driver, other driver is ignored [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+WARNING: [Synth 8-3332] Sequential element (\fsm/noOfSticksR3_reg[2] ) is unused and will be removed from module top.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net noOfSticksR3[2] with 1st driver pin 'fsm/noOfSticksR3_reg[2]/Q' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net noOfSticksR3[2] with 2nd driver pin 'VCC' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net noOfSticksR3[2] is connected to constant driver, other driver is ignored [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+WARNING: [Synth 8-3332] Sequential element (\fsm/noOfSticksR3_reg[1] ) is unused and will be removed from module top.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net noOfSticksR3[1] with 1st driver pin 'fsm/noOfSticksR3_reg[1]/Q' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net noOfSticksR3[1] with 2nd driver pin 'GND' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net noOfSticksR3[1] is connected to constant driver, other driver is ignored [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+WARNING: [Synth 8-3332] Sequential element (\fsm/noOfSticksR3_reg[0] ) is unused and will be removed from module top.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net noOfSticksR3[0] with 1st driver pin 'fsm/noOfSticksR3_reg[0]/Q' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net noOfSticksR3[0] with 2nd driver pin 'VCC' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net noOfSticksR3[0] is connected to constant driver, other driver is ignored [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+WARNING: [Synth 8-3332] Sequential element (\fsm/noOfSticksR2_reg[1] ) is unused and will be removed from module top.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net noOfSticksR2[1] with 1st driver pin 'fsm/noOfSticksR2_reg[1]/Q' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net noOfSticksR2[1] with 2nd driver pin 'VCC' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net noOfSticksR2[1] is connected to constant driver, other driver is ignored [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+WARNING: [Synth 8-3332] Sequential element (\fsm/noOfSticksR2_reg[0] ) is unused and will be removed from module top.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net noOfSticksR2[0] with 1st driver pin 'fsm/noOfSticksR2_reg[0]/Q' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net noOfSticksR2[0] with 2nd driver pin 'VCC' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net noOfSticksR2[0] is connected to constant driver, other driver is ignored [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+WARNING: [Synth 8-3332] Sequential element (\fsm/noOfSticksR4_reg[2] ) is unused and will be removed from module top.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net noOfSticksR4[2] with 1st driver pin 'fsm/noOfSticksR4_reg[2]/Q' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net noOfSticksR4[2] with 2nd driver pin 'VCC' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net noOfSticksR4[2] is connected to constant driver, other driver is ignored [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+WARNING: [Synth 8-3332] Sequential element (\fsm/noOfSticksR4_reg[1] ) is unused and will be removed from module top.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net noOfSticksR4[1] with 1st driver pin 'fsm/noOfSticksR4_reg[1]/Q' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net noOfSticksR4[1] with 2nd driver pin 'VCC' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net noOfSticksR4[1] is connected to constant driver, other driver is ignored [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+WARNING: [Synth 8-3332] Sequential element (\fsm/noOfSticksR4_reg[0] ) is unused and will be removed from module top.
+CRITICAL WARNING: [Synth 8-3352] multi-driven net noOfSticksR4[0] with 1st driver pin 'fsm/noOfSticksR4_reg[0]/Q' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+CRITICAL WARNING: [Synth 8-3352] multi-driven net noOfSticksR4[0] with 2nd driver pin 'VCC' [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+CRITICAL WARNING: [Synth 8-5559] multi-driven net noOfSticksR4[0] is connected to constant driver, other driver is ignored [D:/Users/TEMP.PCLABS/Desktop/CS223_Project/Beti_Modules/stepmotor_7seg/top.sv:150]
+WARNING: [Synth 8-3332] Sequential element (\fsm/state_reg[3][3] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\fsm/state_reg[3][2] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\fsm/state_reg[3][1] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\fsm/state_reg[3][0] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\st_l/newScore_reg[7] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\st_l/newScore_reg[6] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\st_l/newScore_reg[5] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\st_l/newScore_reg[4] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\st_l/newScore_reg[3] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\st_l/newScore_reg[2] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\st_l/newScore_reg[1] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\st_l/newScore_reg[0] ) is unused and will be removed from module top.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 576.195 ; gain = 397.738
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 576.195 ; gain = 397.738
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 576.195 ; gain = 397.738
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 576.195 ; gain = 397.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 576.195 ; gain = 397.738
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d3r3/count_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d3r3/count_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d3r3/count_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d3r3/count_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d3r3/count_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d1r1/count_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d1r1/count_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d1r1/count_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d1r1/count_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d1r1/count_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d4r4/count_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d4r4/count_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d4r4/count_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d4r4/count_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d4r4/count_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d2r2/count_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d2r2/count_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d2r2/count_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d2r2/count_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d2r2/count_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d3r3/count_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d1r1/count_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d4r4/count_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d2r2/count_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d3r3/count_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d3r3/count_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d3r3/count_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d3r3/count_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d3r3/count_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d3r3/count_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d3r3/count_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d3r3/count_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d3r3/count_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d3r3/count_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d3r3/count_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d3r3/count_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d3r3/count_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d3r3/count_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d3r3/count_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d3r3/count_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d3r3/count_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d3r3/count_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d3r3/count_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d3r3/count_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d1r1/count_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d1r1/count_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d1r1/count_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d1r1/count_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d1r1/count_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d1r1/count_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d1r1/count_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d1r1/count_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d1r1/count_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d1r1/count_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d1r1/count_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d1r1/count_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d1r1/count_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d1r1/count_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d1r1/count_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d1r1/count_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d1r1/count_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d1r1/count_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d1r1/count_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d1r1/count_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d4r4/count_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d4r4/count_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d4r4/count_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d4r4/count_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d4r4/count_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d4r4/count_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d4r4/count_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d4r4/count_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d4r4/count_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d4r4/count_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d4r4/count_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d4r4/count_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d4r4/count_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d4r4/count_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d4r4/count_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d4r4/count_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d4r4/count_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d4r4/count_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d4r4/count_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d4r4/count_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d2r2/count_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d2r2/count_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d2r2/count_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d2r2/count_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d2r2/count_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d2r2/count_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d2r2/count_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d2r2/count_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d2r2/count_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d2r2/count_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d2r2/count_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d2r2/count_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d2r2/count_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d2r2/count_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\d2r2/count_reg[20] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (\fsm/direction_reg ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\fsm/newNoOfSticksR1_reg ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\fsm/newNoOfSticksR1_reg__0 ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\fsm/newNoOfSticksR2_reg[1] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\fsm/newNoOfSticksR2_reg[0] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\fsm/newNoOfSticksR2_reg[1]__0 ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\fsm/newNoOfSticksR2_reg[0]__0 ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\fsm/newNoOfSticksR3_reg[2] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\fsm/newNoOfSticksR3_reg[1] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\fsm/newNoOfSticksR3_reg[0] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\fsm/newNoOfSticksR3_reg[2]__0 ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\fsm/newNoOfSticksR3_reg[1]__0 ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\fsm/newNoOfSticksR3_reg[0]__0 ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\fsm/newNoOfSticksR4_reg[2] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\fsm/newNoOfSticksR4_reg[1] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\fsm/newNoOfSticksR4_reg[0] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\fsm/newNoOfSticksR4_reg[2]__0 ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\fsm/newNoOfSticksR4_reg[1]__0 ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\fsm/newNoOfSticksR4_reg[0]__0 ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\fsm/nextState_reg[0][3] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\fsm/nextState_reg[0][2] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\fsm/nextState_reg[0][1] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\fsm/nextState_reg[0][0] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d1r1/state_reg[1] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d1r1/state_reg[0] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d1r1/count_reg[25] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d1r1/count_reg[24] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d1r1/count_reg[23] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d1r1/count_reg[22] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d1r1/count_reg[21] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d1r1/count_reg[20] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d1r1/count_reg[19] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d1r1/count_reg[18] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d1r1/count_reg[17] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d1r1/count_reg[16] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d1r1/count_reg[15] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d1r1/count_reg[14] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d1r1/count_reg[13] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d1r1/count_reg[12] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d1r1/count_reg[11] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d1r1/count_reg[10] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d1r1/count_reg[9] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d1r1/count_reg[8] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d1r1/count_reg[7] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d1r1/count_reg[6] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d1r1/count_reg[5] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d1r1/count_reg[4] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d1r1/count_reg[3] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d1r1/count_reg[2] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d1r1/count_reg[1] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d1r1/count_reg[0] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d1r1/debounce_reg ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d2r2/state_reg[1] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d2r2/state_reg[0] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d2r2/count_reg[25] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d2r2/count_reg[24] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d2r2/count_reg[23] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d2r2/count_reg[22] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d2r2/count_reg[21] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d2r2/count_reg[20] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d2r2/count_reg[19] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d2r2/count_reg[18] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d2r2/count_reg[17] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d2r2/count_reg[16] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d2r2/count_reg[15] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d2r2/count_reg[14] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d2r2/count_reg[13] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d2r2/count_reg[12] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d2r2/count_reg[11] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d2r2/count_reg[10] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d2r2/count_reg[9] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d2r2/count_reg[8] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d2r2/count_reg[7] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\d2r2/count_reg[6] ) is unused and will be removed from module top.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 576.195 ; gain = 397.738
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3295] tying undriven pin stepmotor:stop to constant 0
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 576.195 ; gain = 397.738
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 576.195 ; gain = 397.738
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 576.195 ; gain = 397.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 576.195 ; gain = 397.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 576.195 ; gain = 397.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    12|
+|3     |GND    |     3|
+|4     |LUT1   |     6|
+|5     |LUT2   |    17|
+|6     |LUT3   |    42|
+|7     |LUT4   |    22|
+|8     |LUT5   |    10|
+|9     |LUT6   |    18|
+|10    |VCC    |     3|
+|11    |FDRE   |    95|
+|12    |IBUF   |     1|
+|13    |OBUF   |    29|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------+--------------+------+
+|      |Instance      |Module        |Cells |
++------+--------------+--------------+------+
+|1     |top           |              |   259|
+|2     |  stepmotor   |stepmotor     |    56|
+|3     |  sevSeg      |SevSeg_4digit |    41|
+|4     |  display_8x8 |display_8x8   |   131|
++------+--------------+--------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 576.195 ; gain = 397.738
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 27 critical warnings and 188 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:13 . Memory (MB): peak = 576.195 ; gain = 88.219
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 576.195 ; gain = 397.738
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+358 Infos, 161 Warnings, 31 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 576.195 ; gain = 382.641
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 576.195 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sat May 12 18:24:13 2018...
